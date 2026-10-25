@@ -1,0 +1,74 @@
+# Maintainer: Custom Build for Artix Linux (dinit)
+pkgname=umbriel-git
+pkgver=0.1.0.r0.g0000000
+pkgrel=1
+pkgdesc="A Wayland compositor built on wlroots with scrolling, dwindle, and master layouts (git version)"
+arch=('x86_64' 'aarch64')
+url="https://github.com/noctalia-dev/umbriel"
+license=('MIT')
+depends=(
+  'cairo'
+  'gcc-libs'
+  'glibc'
+  'jemalloc'
+  'libdrm'
+  'libglvnd'
+  'libinput'
+  'libseat'
+  'libxcb'
+  'libxkbcommon'
+  'pango'
+  'pixman'
+  'tomlplusplus'
+  'wayland'
+  'wlroots>=0.20.1'
+  'xcb-util-ewmh'
+  'xcb-util-icccm'
+  'xcb-util-renderutil'
+  'xcb-util-wm'
+  'xorg-xwayland'
+)
+makedepends=(
+  'git'
+  'meson'
+  'ninja'
+  'nlohmann-json'
+  'pkgconf'
+  'wayland-protocols'
+)
+optdepends=(
+  'xdg-desktop-portal-umbriel: XDG desktop portal backend for screen sharing and screenshots'
+)
+provides=('umbriel')
+conflicts=('umbriel')
+backup=('etc/xdg/umbriel/config.toml')
+source=("git+${url}.git")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd umbriel
+  git describe --long --tags --abbrev=7 2>/dev/null | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g' ||
+    printf "0.1.0.r%s.g%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+}
+
+build() {
+  meson setup umbriel build \
+    --prefix=/usr \
+    --libexecdir=/usr/lib \
+    --sysconfdir=/etc \
+    --buildtype=release \
+    -Dlocaled=disabled \
+    -Djemalloc=enabled \
+    -Dtests=disabled
+
+  meson compile -C build
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+
+  # Remove any stray systemd user service files if generated
+  rm -rf "$pkgdir/usr/lib/systemd"
+
+  install -Dm644 umbriel/LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
