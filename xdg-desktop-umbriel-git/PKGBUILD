@@ -1,0 +1,67 @@
+# Maintainer: Custom Build for Artix Linux (dinit)
+pkgname=xdg-desktop-portal-umbriel-git
+pkgver=0.1.0.r0.g0000000
+pkgrel=1
+pkgdesc="XDG Desktop Portal backend for the Umbriel Wayland compositor (git version)"
+arch=('x86_64' 'aarch64')
+url="https://github.com/noctalia-dev/xdg-desktop-portal-umbriel"
+license=('MIT')
+depends=(
+  'cairo'
+  'gcc-libs'
+  'glibc'
+  'gtk4'
+  'libdrm'
+  'libpipewire'
+  'mesa'
+  'sdbus-cpp>=2.0'
+  'tomlplusplus'
+  'wayland'
+  'xdg-desktop-portal'
+)
+makedepends=(
+  'git'
+  'meson'
+  'ninja'
+  'nlohmann-json'
+  'pkgconf'
+  'wayland-protocols>=1.39'
+)
+provides=('xdg-desktop-portal-umbriel')
+conflicts=('xdg-desktop-portal-umbriel')
+backup=('etc/xdg/xdg-desktop-portal-umbriel/config.toml')
+source=("git+${url}.git")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd xdg-desktop-portal-umbriel
+  git describe --long --tags --abbrev=7 2>/dev/null | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g' ||
+    printf "0.1.0.r%s.g%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+}
+
+build() {
+  meson setup xdg-desktop-portal-umbriel build \
+    --prefix=/usr \
+    --libexecdir=/usr/lib \
+    --sysconfdir=/etc \
+    --buildtype=release
+
+  meson compile -C build
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+
+  # Fix hardcoded /usr/local/libexec or /usr/libexec path in default config.toml for Arch/Artix layout
+  if [[ -f "$pkgdir/etc/xdg/xdg-desktop-portal-umbriel/config.toml" ]]; then
+    sed -i 's|/usr/local/libexec/umbriel-share-picker|/usr/lib/umbriel-share-picker|g' \
+      "$pkgdir/etc/xdg/xdg-desktop-portal-umbriel/config.toml"
+    sed -i 's|/usr/libexec/umbriel-share-picker|/usr/lib/umbriel-share-picker|g' \
+      "$pkgdir/etc/xdg/xdg-desktop-portal-umbriel/config.toml"
+  fi
+
+  # Remove systemd user unit directory (Artix uses D-Bus activation or dinit user services)
+  rm -rf "$pkgdir/usr/lib/systemd"
+
+  install -Dm644 xdg-desktop-portal-umbriel/LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
