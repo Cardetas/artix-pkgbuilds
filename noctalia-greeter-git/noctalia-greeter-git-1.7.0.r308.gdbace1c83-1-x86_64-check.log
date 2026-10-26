@@ -1,0 +1,84 @@
+ninja: Entering directory `/build/noctalia-greeter-git/src/build-release'
+[1/47] Compiling C++ object passwordless-sync-policy-xml-test.p/tests_passwordless_sync_policy_xml_test.cpp.o
+[2/47] Compiling C++ object legacy-staging-compatibility-test.p/src_greeter_privileged_state_paths.cpp.o
+[3/47] Compiling C++ object passwordless-sync-policy-xml-test.p/src_tools_passwordless_sync_policy_xml.cpp.o
+[4/47] Compiling C++ object legacy-staging-compatibility-test.p/src_core_log.cpp.o
+[5/47] Compiling C++ object greetd-client-response-test.p/src_core_log.cpp.o
+[6/47] Compiling C++ object legacy-staging-compatibility-test.p/src_render_core_color.cpp.o
+[7/47] Compiling C++ object legacy-staging-compatibility-test.p/src_greeter_greetd_user.cpp.o
+[8/47] Compiling C++ object noctalia-greeter.p/src_wayland_wayland_seat.cpp.o
+[9/47] Compiling C++ object jxl-decoder-test.p/tests_jxl_decoder_test.cpp.o
+[10/47] Compiling C object system-keyboard-config-test.p/tests_system_keyboard_config_test.c.o
+[11/47] Compiling C++ object legacy-staging-compatibility-test.p/src_tools_secure_appearance_sync.cpp.o
+[12/47] Compiling C object system-keyboard-config-test.p/src_compositor_system_keyboard_config.c.o
+[13/47] Compiling C++ object output-identity-test.p/tests_output_identity_test.cpp.o
+[14/47] Compiling C++ object legacy-staging-compatibility-test.p/src_greeter_greeter_preferences.cpp.o
+[15/47] Compiling C object output-identity-test.p/src_config_output_identity.c.o
+[16/47] Compiling C++ object wallpaper-span-geometry-test.p/tests_wallpaper_span_geometry_test.cpp.o
+[17/47] Compiling C++ object noctalia-greeter.p/src_wayland_wayland_client.cpp.o
+[18/47] Compiling C++ object legacy-staging-compatibility-test.p/src_greeter_appearance_config.cpp.o
+[19/47] Compiling C++ object time-format-test.p/tests_time_format_test.cpp.o
+[20/47] Compiling C++ object legacy-staging-compatibility-test.p/tests_legacy_staging_compatibility_test.cpp.o
+[21/47] Compiling C++ object legacy-staging-compatibility-test.p/src_greeter_greeter_config_io.cpp.o
+[22/47] Compiling C++ object wallpaper-program-pixel-test.p/src_render_programs_wallpaper_program.cpp.o
+[23/47] Compiling C++ object greeter-sessions-lookup-test.p/tests_greeter_sessions_lookup_test.cpp.o
+[24/47] Compiling C++ object greetd-client-response-test.p/tests_greetd_client_response_test.cpp.o
+[25/47] Compiling C++ object wallpaper-program-pixel-test.p/src_render_core_shader_program.cpp.o
+[26/47] Linking target system-keyboard-config-test
+[27/47] Linking target output-identity-test
+[28/47] Compiling C++ object wallpaper-program-pixel-test.p/tests_wallpaper_program_pixel_test.cpp.o
+[29/47] Linking target wallpaper-span-geometry-test
+[30/47] Compiling C++ object session-discovery-test.p/tests_session_discovery_test.cpp.o
+../noctalia-greeter/tests/session_discovery_test.cpp: In function ‘void {anonymous}::testSessionArgv()’:
+../noctalia-greeter/tests/session_discovery_test.cpp:85:5: warning: missing initializer for member ‘greeter::SessionOption::desktopId’ [-Wmissing-field-initializers]
+   85 |     };
+      |     ^
+../noctalia-greeter/tests/session_discovery_test.cpp:93:5: warning: missing initializer for member ‘greeter::SessionOption::desktopId’ [-Wmissing-field-initializers]
+   93 |     };
+      |     ^
+../noctalia-greeter/tests/session_discovery_test.cpp:101:5: warning: missing initializer for member ‘greeter::SessionOption::desktopId’ [-Wmissing-field-initializers]
+  101 |     };
+      |     ^
+../noctalia-greeter/tests/session_discovery_test.cpp:107:117: warning: missing initializer for member ‘greeter::SessionOption::desktopId’ [-Wmissing-field-initializers]
+  107 |     const greeter::SessionOption tty{.name = "Shell", .command = "/bin/sh", .desktopNames = {}, .sessionType = "tty"};
+      |                                                                                                                     ^
+../noctalia-greeter/tests/session_discovery_test.cpp:110:118: warning: missing initializer for member ‘greeter::SessionOption::desktopId’ [-Wmissing-field-initializers]
+  110 |     const greeter::SessionOption empty{.name = "Empty", .command = "  ", .desktopNames = {}, .sessionType = "wayland"};
+      |                                                                                                                      ^
+[31/47] Compiling C++ object greeter-sessions-lookup-test.p/src_greeter_greeter_sessions.cpp.o
+[32/47] Linking target passwordless-sync-policy-xml-test
+[33/47] Compiling C++ object session-discovery-test.p/src_greeter_greeter_sessions.cpp.o
+[34/47] Linking target greeter-sessions-lookup-test
+[35/47] Compiling C++ object time-format-test.p/src_time_time_format.cpp.o
+[36/47] Linking target wallpaper-program-pixel-test
+[37/47] Compiling C++ object greeter-frame-loop-test.p/tests_greeter_frame_loop_test.cpp.o
+[38/47] Compiling C++ object greetd-client-response-test.p/src_greetd_greetd_client.cpp.o
+[39/47] Compiling C++ object legacy-staging-compatibility-test.p/src_greeter_appearance_sync.cpp.o
+[40/47] Linking target session-discovery-test
+[41/47] Linking target greetd-client-response-test
+[42/47] Linking target time-format-test
+[43/47] Linking target legacy-staging-compatibility-test
+[44/47] Compiling C++ object jxl-decoder-test.p/src_render_core_image_decoder.cpp.o
+[45/47] Linking target noctalia-greeter
+[46/47] Linking target greeter-frame-loop-test
+[47/47] Linking target jxl-decoder-test
+ 1/15 noctalia-greeter:greetd-client-response         OK              0.08s
+ 2/15 noctalia-greeter:passwordless-sync-policy-xml   OK              0.07s
+ 3/15 noctalia-greeter:apply-appearance-compatibility OK              0.06s
+ 4/15 noctalia-greeter:jxl-decoder                    OK              0.05s
+ 5/15 noctalia-greeter:wallpaper-span-geometry        OK              0.04s
+ 6/15 noctalia-greeter:greeter-sessions-lookup        OK              0.04s
+ 7/15 noctalia-greeter:system-keyboard-config         OK              0.03s
+ 8/15 noctalia-greeter:output-identity                OK              0.03s
+ 9/15 noctalia-greeter:legacy-staging-compatibility   OK              0.08s
+10/15 noctalia-greeter:session-discovery              OK              0.04s
+11/15 noctalia-greeter:passwordless-sync-help         OK              0.09s
+12/15 noctalia-greeter:time-format                    OK              0.02s
+13/15 noctalia-greeter:compositor-headless-layout     OK              0.41s
+14/15 noctalia-greeter:wallpaper-program-pixels       OK              0.76s
+15/15 noctalia-greeter:greeter-frame-loop             OK              2.41s
+
+Ok:                15  
+Fail:              0   
+
+Full log written to /build/noctalia-greeter-git/src/build-release/meson-logs/testlog.txt

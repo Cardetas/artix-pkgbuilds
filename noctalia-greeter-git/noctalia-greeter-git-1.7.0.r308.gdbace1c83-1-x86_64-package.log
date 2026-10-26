@@ -1,0 +1,19 @@
+ninja: Entering directory `/build/noctalia-greeter-git/src/build-release'
+ninja: no work to do.
+Installing subdir /build/noctalia-greeter-git/src/noctalia-greeter/assets to /build/noctalia-greeter-git/pkg/noctalia-greeter-git/usr/share/noctalia-greeter/assets
+Installing /build/noctalia-greeter-git/src/noctalia-greeter/assets/noctalia.svg to /build/noctalia-greeter-git/pkg/noctalia-greeter-git/usr/share/noctalia-greeter/assets
+Installing /build/noctalia-greeter-git/src/noctalia-greeter/assets/fonts/tabler-icons-license.txt to /build/noctalia-greeter-git/pkg/noctalia-greeter-git/usr/share/noctalia-greeter/assets/fonts
+Installing /build/noctalia-greeter-git/src/noctalia-greeter/assets/fonts/tabler.json to /build/noctalia-greeter-git/pkg/noctalia-greeter-git/usr/share/noctalia-greeter/assets/fonts
+Installing /build/noctalia-greeter-git/src/noctalia-greeter/assets/fonts/tabler.ttf to /build/noctalia-greeter-git/pkg/noctalia-greeter-git/usr/share/noctalia-greeter/assets/fonts
+Installing noctalia-greeter to /build/noctalia-greeter-git/pkg/noctalia-greeter-git/usr/bin
+Installing noctalia-greeter-apply-appearance to /build/noctalia-greeter-git/pkg/noctalia-greeter-git/usr/bin
+Installing noctalia-greeter-compositor to /build/noctalia-greeter-git/pkg/noctalia-greeter-git/usr/bin
+Installing /build/noctalia-greeter-git/src/noctalia-greeter/scripts/noctalia-greeter-session to /build/noctalia-greeter-git/pkg/noctalia-greeter-git/usr/bin
+Installing /build/noctalia-greeter-git/src/noctalia-greeter/scripts/noctalia-greeter-print-greetd-config to /build/noctalia-greeter-git/pkg/noctalia-greeter-git/usr/bin
+Installing /build/noctalia-greeter-git/src/noctalia-greeter/scripts/noctalia-greeter-xsession to /build/noctalia-greeter-git/pkg/noctalia-greeter-git/usr/bin
+Installing /build/noctalia-greeter-git/src/noctalia-greeter/scripts/greetd_setup_lib.sh to /build/noctalia-greeter-git/pkg/noctalia-greeter-git/usr/share/noctalia-greeter
+Installing /build/noctalia-greeter-git/src/noctalia-greeter/scripts/print_greetd_config.sh to /build/noctalia-greeter-git/pkg/noctalia-greeter-git/usr/share/noctalia-greeter
+Installing /build/noctalia-greeter-git/src/noctalia-greeter/scripts/setup_greetd_pam.sh to /build/noctalia-greeter-git/pkg/noctalia-greeter-git/usr/share/noctalia-greeter
+Installing /build/noctalia-greeter-git/src/noctalia-greeter/scripts/setup_greeter_system.sh to /build/noctalia-greeter-git/pkg/noctalia-greeter-git/usr/share/noctalia-greeter
+Installing /build/noctalia-greeter-git/src/build-release/org.noctalia.greeter.apply-appearance.policy to /build/noctalia-greeter-git/pkg/noctalia-greeter-git/usr/share/polkit-1/actions
+Installing /build/noctalia-greeter-git/src/noctalia-greeter/data/tmpfiles.d/noctalia-greeter.conf to /build/noctalia-greeter-git/pkg/noctalia-greeter-git/usr/lib/tmpfiles.d

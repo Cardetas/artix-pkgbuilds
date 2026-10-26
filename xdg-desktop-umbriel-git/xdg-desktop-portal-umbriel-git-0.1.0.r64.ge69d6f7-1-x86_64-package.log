@@ -1,0 +1,8 @@
+ninja: Entering directory `/build/xdg-desktop-portal-umbriel-git/src/build'
+ninja: no work to do.
+Installing xdg-desktop-portal-umbriel to /build/xdg-desktop-portal-umbriel-git/pkg/xdg-desktop-portal-umbriel-git/usr/lib
+Installing umbriel-share-picker to /build/xdg-desktop-portal-umbriel-git/pkg/xdg-desktop-portal-umbriel-git/usr/lib
+Installing /build/xdg-desktop-portal-umbriel-git/src/xdg-desktop-portal-umbriel/data/umbriel.portal to /build/xdg-desktop-portal-umbriel-git/pkg/xdg-desktop-portal-umbriel-git/usr/share/xdg-desktop-portal/portals
+Installing /build/xdg-desktop-portal-umbriel-git/src/xdg-desktop-portal-umbriel/data/umbriel-portals.conf to /build/xdg-desktop-portal-umbriel-git/pkg/xdg-desktop-portal-umbriel-git/usr/share/xdg-desktop-portal
+Installing /build/xdg-desktop-portal-umbriel-git/src/build/org.freedesktop.impl.portal.desktop.umbriel.service to /build/xdg-desktop-portal-umbriel-git/pkg/xdg-desktop-portal-umbriel-git/usr/share/dbus-1/services
+Installing /build/xdg-desktop-portal-umbriel-git/src/build/xdg-desktop-portal-umbriel.service to /build/xdg-desktop-portal-umbriel-git/pkg/xdg-desktop-portal-umbriel-git/usr/lib/systemd/user

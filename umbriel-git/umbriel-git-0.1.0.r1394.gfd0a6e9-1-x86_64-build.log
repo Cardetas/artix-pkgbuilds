@@ -1,0 +1,283 @@
+The Meson build system
+Version: 1.12.1
+Source dir: /build/umbriel-git/src/umbriel
+Build dir: /build/umbriel-git/src/build
+Build type: native build
+Project name: umbriel
+Project version: 0.1.0
+C compiler for the host machine: cc (gcc 16.2.1 "cc (GCC) 16.2.1 20260810")
+C linker for the host machine: cc ld.bfd 2.47
+C++ compiler for the host machine: c++ (gcc 16.2.1 "c++ (GCC) 16.2.1 20260810")
+C++ linker for the host machine: c++ ld.bfd 2.47
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Program git found: YES (/usr/bin/git)
+Configuring umbriel_data_dir.h using configuration
+Found pkg-config: YES (/usr/bin/pkg-config) 3.0.10
+Run-time dependency wayland-server found: YES 1.26.0
+Run-time dependency wayland-client found: YES 1.26.0
+Run-time dependency wayland-protocols found: YES 1.49
+Run-time dependency wlroots-0.20 found: YES 0.20.2
+Fetching value of define "WLR_HAS_SESSION" with dependency wlroots-0.20: 1 
+Fetching value of define "WLR_HAS_DRM_BACKEND" with dependency wlroots-0.20: 1 
+Fetching value of define "WLR_HAS_LIBINPUT_BACKEND" with dependency wlroots-0.20: 1 
+Fetching value of define "WLR_HAS_XWAYLAND" with dependency wlroots-0.20: 1 
+Fetching value of define "__GLIBC__" : 2 
+Run-time dependency jemalloc found: YES 5.4.0_0
+Run-time dependency xkbcommon found: YES 1.13.2
+Run-time dependency libinput found: YES 1.32.0
+Run-time dependency libeis-1.0 found: YES 1.6.0
+Run-time dependency pixman-1 found: YES 0.46.4
+Run-time dependency tomlplusplus found: YES 3.4.0
+Run-time dependency nlohmann_json found: YES 3.12.0
+Run-time dependency cairo found: YES 1.18.6
+Run-time dependency pangocairo found: YES 1.58.2
+Run-time dependency libdrm found: YES 2.4.134
+Run-time dependency libdisplay-info found: YES 0.3.0
+Run-time dependency libudev found: YES 262
+Dependency libsystemd for host machine skipped: feature localed disabled
+Run-time dependency xcb found: YES 1.17.0
+Run-time dependency xcb-icccm found: YES 0.4.2
+Run-time dependency xcb-ewmh found: YES 0.4.2
+Program wayland-scanner found: YES (/usr/bin/wayland-scanner)
+Dependency tracy for host machine skipped: feature tracy disabled
+Library dl found: YES
+Run-time dependency egl found: YES 1.5
+Run-time dependency gbm found: YES 26.2.5-arch1.1
+Run-time dependency glesv2 found: YES 3.2
+Library m found: YES
+Library rt found: YES
+Fetching value of define "EGL_EGLEXT_VERSION" with dependency egl: 20211210 
+Run-time dependency lcms2 found: YES 2.19
+Compiler for C supports arguments -fmacro-prefix-map=/prefix/to/hide=: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wlogical-op: YES 
+Compiler for C supports arguments -Wmissing-include-dirs: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Winit-self: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wimplicit-fallthrough=2: YES 
+Compiler for C supports arguments -Wendif-labels: YES 
+Compiler for C supports arguments -Wstrict-aliasing=2: YES 
+Compiler for C supports arguments -Woverflow: YES 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Compiler for C supports arguments -Walloca: YES 
+Compiler for C supports arguments -Wno-missing-braces: YES 
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Program render/fx_renderer/shaders/embed.sh found: YES (/bin/sh -eu /build/umbriel-git/src/umbriel/umbrielfx/render/fx_renderer/shaders/embed.sh)
+Configuring start-umbriel using configuration
+Configuring umbriel.service using configuration
+Build targets in project: 95
+
+umbriel 0.1.0
+
+  User defined options
+    buildtype : release
+    jemalloc  : enabled
+    libexecdir: /usr/lib
+    localed   : disabled
+    prefix    : /usr
+    sysconfdir: /etc
+    tests     : disabled
+
+Found ninja-1.13.2 at /usr/bin/ninja
+Generating targets:   0%|          | 0/95 eta ?                                               Writing build.ninja:   0%|          | 0/289 eta ?                                                 ninja: Entering directory `/build/umbriel-git/src/build'
+[1/195] Generating wlr-layer-shell-unstable-v1-protocol.h with a custom command
+[2/195] Generating umbrielfx/corner_alpha_frag_src.h with a custom command (wrapped by meson to capture output, to feed input)
+[3/195] Generating umbrielfx/blur1_frag_src.h with a custom command (wrapped by meson to capture output, to feed input)
+[4/195] Generating umbrielfx/common_vert_src.h with a custom command (wrapped by meson to capture output, to feed input)
+[5/195] Generating umbrielfx/border_frag_src.h with a custom command (wrapped by meson to capture output, to feed input)
+[6/195] Generating umbrielfx/gradient_frag_src.h with a custom command (wrapped by meson to capture output, to feed input)
+[7/195] Generating xdg-shell-client-protocol.c with a custom command
+[8/195] Generating xdg-toplevel-drag-v1-server-protocol.h with a custom command
+[9/195] Generating xdg-toplevel-drag-v1-protocol.c with a custom command
+[10/195] Generating color-management-v1-server-protocol.h with a custom command
+[11/195] Generating color-management-v1-server-protocol.c with a custom command
+[12/195] Generating umbrielfx/quad_grad_round_frag_src.h with a custom command (wrapped by meson to capture output, to feed input)
+[13/195] Generating umbrielfx/quad_round_frag_src.h with a custom command (wrapped by meson to capture output, to feed input)
+[14/195] Generating xdg-output-unstable-v1-protocol.h with a custom command
+[15/195] Generating xdg-output-unstable-v1-protocol.c with a custom command
+[16/195] Generating umbrielfx/blur2_frag_src.h with a custom command (wrapped by meson to capture output, to feed input)
+[17/195] Generating umbrielfx/quad_frag_src.h with a custom command (wrapped by meson to capture output, to feed input)
+[18/195] Generating umbrielfx/box_shadow_frag_src.h with a custom command (wrapped by meson to capture output, to feed input)
+[19/195] Generating umbrielfx/quad_grad_frag_src.h with a custom command (wrapped by meson to capture output, to feed input)
+[20/195] Generating umbrielfx/output_frag_src.h with a custom command (wrapped by meson to capture output, to feed input)
+[21/195] Generating umbrielfx/tex_frag_src.h with a custom command (wrapped by meson to capture output, to feed input)
+[22/195] Generating umbrielfx/effect_light_frag_src.h with a custom command (wrapped by meson to capture output, to feed input)
+[23/195] Generating umbriel_git_revision.h with a custom command
+[24/195] Compiling C object umbrielfx/libumbrielfx.a.p/render_color.c.o
+[25/195] Compiling C object umbrielfx/libumbrielfx.a.p/render_pixel_format.c.o
+[26/195] Compiling C object umbrielfx/libumbrielfx.a.p/render_egl.c.o
+[27/195] Compiling C object umbrielfx/libumbrielfx.a.p/render_fx_renderer_fx_framebuffer.c.o
+[28/195] Compiling C object umbrielfx/libumbrielfx.a.p/render_fx_renderer_fx_offscreen_buffers.c.o
+[29/195] Compiling C++ object libumbriel-pure.a.p/src_input_lid_state.cpp.o
+[30/195] Compiling C object umbrielfx/libumbrielfx.a.p/render_fx_renderer_fx_renderer.c.o
+[31/195] Compiling C object umbrielfx/libumbrielfx.a.p/render_fx_renderer_fx_texture.c.o
+[32/195] Compiling C object umbrielfx/libumbrielfx.a.p/render_fx_renderer_effect_shader.c.o
+[33/195] Compiling C object umbrielfx/libumbrielfx.a.p/render_fx_renderer_fx_pass.c.o
+[34/195] Compiling C object umbrielfx/libumbrielfx.a.p/render_fx_renderer_tracy.c.o
+[35/195] Compiling C object umbrielfx/libumbrielfx.a.p/render_fx_renderer_pixel_format.c.o
+[36/195] Compiling C object umbrielfx/libumbrielfx.a.p/render_fx_renderer_shaders.c.o
+[37/195] Compiling C++ object libumbriel-pure.a.p/src_config_value_parse.cpp.o
+[38/195] Compiling C object umbrielfx/libumbrielfx.a.p/types_fx_blur_data.c.o
+[39/195] Compiling C object umbrielfx/libumbrielfx.a.p/render_fx_renderer_util.c.o
+[40/195] Compiling C object umbrielfx/libumbrielfx.a.p/types_fx_clipped_region.c.o
+[41/195] Compiling C++ object libumbriel-pure.a.p/src_input_keyboard_leds.cpp.o
+[42/195] Compiling C object umbrielfx/libumbrielfx.a.p/types_linux_drm_syncobj.c.o
+[43/195] Compiling C object umbrielfx/libumbrielfx.a.p/types_scene_linked_node.c.o
+[44/195] Compiling C object umbrielfx/libumbrielfx.a.p/types_scene_capture.c.o
+[45/195] Compiling C object umbrielfx/libumbrielfx.a.p/types_output_output.c.o
+[46/195] Compiling C object umbrielfx/libumbrielfx.a.p/types_scene_drag_icon.c.o
+[47/195] Compiling C object umbrielfx/libumbrielfx.a.p/types_scene_layer_shell_v1.c.o
+[48/195] Compiling C++ object libumbriel-pure.a.p/src_input_swipe_tracker.cpp.o
+[49/195] Compiling C object umbrielfx/libumbrielfx.a.p/types_scene_output_layout.c.o
+[50/195] Compiling C object umbrielfx/libumbrielfx.a.p/types_scene_subsurface_tree.c.o
+[51/195] Compiling C++ object libumbriel-pure.a.p/src_input_surface_layouts.cpp.o
+[52/195] Compiling C object umbrielfx/libumbrielfx.a.p/util_array.c.o
+[53/195] Compiling C object umbrielfx/libumbrielfx.a.p/types_scene_scene_guard.c.o
+[54/195] Compiling C object umbrielfx/libumbrielfx.a.p/types_scene_xdg_shell.c.o
+[55/195] Compiling C object umbrielfx/libumbrielfx.a.p/util_time.c.o
+[56/195] Compiling C object umbrielfx/libumbrielfx.a.p/util_env.c.o
+[57/195] Compiling C object umbrielfx/libumbrielfx.a.p/types_scene_surface.c.o
+[58/195] Compiling C object umbrielfx/libumbrielfx.a.p/render_color_lcms2.c.o
+[59/195] Compiling C object umbrielfx/libumbrielfx.a.p/util_matrix.c.o
+[60/195] Compiling C++ object libumbriel-pure.a.p/src_input_shortcut_keysym.cpp.o
+[61/195] Compiling C object umbrielfx/libumbrielfx.a.p/types_scene_wlr_scene.c.o
+[62/195] Compiling C++ object libumbriel-pure.a.p/src_layout_layout_motion.cpp.o
+[63/195] Compiling C++ object libumbriel-pure.a.p/src_input_xcursor_matcher.cpp.o
+[64/195] Compiling C++ object libumbriel-pure.a.p/src_scene_ssd_frame_geometry.cpp.o
+[65/195] Compiling C++ object libumbriel-pure.a.p/src_input_shortcuts_inhibit.cpp.o
+[66/195] Compiling C++ object libumbriel-pure.a.p/src_output_direction.cpp.o
+[67/195] Compiling C++ object libumbriel-pure.a.p/src_output_identity.cpp.o
+[68/195] Compiling C++ object libumbriel-pure.a.p/src_config_section.cpp.o
+[69/195] Compiling C++ object libumbriel-pure.a.p/src_config_effects.cpp.o
+[70/195] Compiling C++ object libumbriel-pure.a.p/src_layout_floating.cpp.o
+[71/195] Compiling C++ object libumbriel-pure.a.p/src_input_modifier_tap.cpp.o
+[72/195] Compiling C++ object libumbriel-pure.a.p/src_server_allocator_policy.cpp.o
+[73/195] Compiling C++ object libumbriel-pure.a.p/src_output_enable_overrides.cpp.o
+[74/195] Compiling C++ object libumbriel-pure.a.p/src_output_mode_selection.cpp.o
+[75/195] Compiling C++ object libumbriel-pure.a.p/src_output_gamma_transition.cpp.o
+[76/195] Compiling C++ object libumbriel-pure.a.p/src_output_cursor_plane_pace.cpp.o
+[77/195] Compiling C++ object libumbriel-pure.a.p/src_input_keyboard_layout.cpp.o
+[78/195] Compiling C++ object libumbriel-pure.a.p/src_view_border_ring.cpp.o
+[79/195] Compiling C++ object libumbriel-pure.a.p/src_config_keybind_parse.cpp.o
+[80/195] Compiling C++ object libumbriel-pure.a.p/src_overview_shortcut_labels.cpp.o
+[81/195] Compiling C++ object libumbriel-pure.a.p/src_server_drm_policy.cpp.o
+[82/195] Compiling C++ object libumbriel-pure.a.p/src_view_floating.cpp.o
+[83/195] Compiling C++ object libumbriel-pure.a.p/src_view_snap.cpp.o
+[84/195] Compiling C object libumbriel-core.a.p/meson-generated_.._xdg-toplevel-drag-v1-protocol.c.o
+[85/195] Compiling C++ object libumbriel-pure.a.p/src_output_format_sequence.cpp.o
+[86/195] Compiling C object libumbriel-core.a.p/meson-generated_.._color-management-v1-server-protocol.c.o
+[87/195] Compiling C object libumbriel-core.a.p/meson-generated_.._xdg-shell-client-protocol.c.o
+[88/195] Compiling C object libumbriel-core.a.p/meson-generated_.._xdg-output-unstable-v1-protocol.c.o
+[89/195] Compiling C++ object libumbriel-pure.a.p/src_config_resolve.cpp.o
+[90/195] Compiling C++ object libumbriel-pure.a.p/src_config_change.cpp.o
+[91/195] Compiling C++ object libumbriel-pure.a.p/src_view_drag_physics.cpp.o
+[92/195] Compiling C++ object libumbriel-pure.a.p/src_layout_layout.cpp.o
+[93/195] Compiling C++ object libumbriel-pure.a.p/src_xwayland_xsettings.cpp.o
+[94/195] Compiling C++ object libumbriel-pure.a.p/src_view_effects_rules.cpp.o
+[95/195] Compiling C++ object libumbriel-pure.a.p/src_layout_scrolling.cpp.o
+[96/195] Compiling C++ object libumbriel-pure.a.p/src_scene_effect_selection.cpp.o
+[97/195] Compiling C++ object libumbriel-pure.a.p/src_layout_master.cpp.o
+[98/195] Compiling C++ object libumbriel-pure.a.p/src_layout_dwindle.cpp.o
+[99/195] Compiling C++ object libumbriel-core.a.p/src_core_application_scope.cpp.o
+[100/195] Compiling C++ object libumbriel-core.a.p/src_core_fdlimit.cpp.o
+[101/195] Compiling C++ object libumbriel-core.a.p/src_core_animation.cpp.o
+[102/195] Compiling C++ object libumbriel-core.a.p/src_core_log.cpp.o
+[103/195] Compiling C++ object libumbriel-pure.a.p/src_scene_cheatsheet_rows.cpp.o
+[104/195] Compiling C++ object libumbriel-core.a.p/src_config_fields.cpp.o
+[105/195] Compiling C++ object libumbriel-core.a.p/src_scene_effect_registry.cpp.o
+[106/195] Compiling C++ object libumbriel-core.a.p/src_config_config_merge.cpp.o
+[107/195] Compiling C++ object libumbriel-core.a.p/src_config_fields_drm.cpp.o
+[108/195] Compiling C++ object libumbriel-core.a.p/src_config_config.cpp.o
+[109/195] Compiling C++ object libumbriel-core.a.p/src_config_fields_effects.cpp.o
+[110/195] Compiling C++ object libumbriel-core.a.p/src_server_color_description.cpp.o
+[111/195] Compiling C++ object libumbriel-core.a.p/src_server_allocator.cpp.o
+[112/195] Compiling C++ object libumbriel-core.a.p/src_config_config_watcher.cpp.o
+[113/195] Compiling C++ object libumbriel-core.a.p/src_config_fields_keybinds.cpp.o
+[114/195] Compiling C++ object libumbriel-core.a.p/src_config_store.cpp.o
+[115/195] Compiling C++ object libumbriel-core.a.p/src_config_fields_output.cpp.o
+[116/195] Compiling C++ object libumbriel-core.a.p/src_server_syncobj_acquire_barrier.cpp.o
+[117/195] Compiling C++ object libumbriel-core.a.p/src_config_schema.cpp.o
+[118/195] Compiling C++ object libumbriel-core.a.p/src_config_fields_layout.cpp.o
+[119/195] Compiling C++ object libumbriel-core.a.p/src_layout_drop_target.cpp.o
+[120/195] Compiling C++ object libumbriel-core.a.p/src_config_fields_input.cpp.o
+[121/195] Compiling C++ object libumbriel-core.a.p/src_server_syncobj_unmap_release.cpp.o
+[122/195] Compiling C++ object libumbriel-core.a.p/src_server_syncobj_superseded_release.cpp.o
+[123/195] Compiling C++ object libumbriel-core.a.p/src_config_fields_rules.cpp.o
+[124/195] Compiling C++ object libumbriel-core.a.p/src_config_fields_animation.cpp.o
+[125/195] Compiling C++ object libumbriel-core.a.p/src_server_color_manager.cpp.o
+[126/195] Compiling C++ object libumbriel-core.a.p/src_config_fields_general.cpp.o
+[127/195] Compiling C++ object libumbriel-core.a.p/src_output_hdr_metadata.cpp.o
+[128/195] Compiling C++ object libumbriel-core.a.p/src_server_backend_manager.cpp.o
+[129/195] Compiling C++ object libumbriel-core.a.p/src_server_server_outputs.cpp.o
+[130/195] Compiling C++ object libumbriel-core.a.p/src_server_server_keybinds.cpp.o
+[131/195] Compiling C++ object libumbriel-core.a.p/src_input_system_keymap.cpp.o
+[132/195] Compiling C++ object libumbriel-core.a.p/src_input_seat.cpp.o
+[133/195] Compiling C++ object libumbriel-core.a.p/src_input_toplevel_drag.cpp.o
+[134/195] Compiling C++ object libumbriel-core.a.p/src_input_text_input.cpp.o
+[135/195] Compiling C++ object libumbriel-core.a.p/src_server_server.cpp.o
+[136/195] Compiling C++ object libumbriel-core.a.p/src_server_effects.cpp.o
+[137/195] Compiling C++ object libumbriel-core.a.p/src_server_actions.cpp.o
+[138/195] Compiling C++ object libumbriel-core.a.p/src_input_gestures.cpp.o
+[139/195] Compiling C++ object libumbriel-core.a.p/src_output_output.cpp.o
+[140/195] Compiling C++ object libumbriel-core.a.p/src_input_keyboard.cpp.o
+[141/195] Compiling C++ object libumbriel-core.a.p/src_server_server_events.cpp.o
+[142/195] Compiling C++ object libumbriel-core.a.p/src_input_cursor_constraint.cpp.o
+[143/195] Compiling C++ object libumbriel-core.a.p/src_view_decoration.cpp.o
+[144/195] Compiling C++ object libumbriel-core.a.p/src_core_process_syscall.cpp.o
+[145/195] Compiling C++ object libumbriel-core.a.p/src_core_process.cpp.o
+[146/195] Compiling C++ object libumbriel-core.a.p/src_input_cursor.cpp.o
+[147/195] Compiling C++ object libumbriel-core.a.p/src_view_effects.cpp.o
+[148/195] Compiling C++ object libumbriel-core.a.p/src_xwayland_outputs.cpp.o
+[149/195] Compiling C++ object libumbriel-core.a.p/src_view_presentation.cpp.o
+[150/195] Compiling C++ object libumbriel-core.a.p/src_input_eis_socket.cpp.o
+[151/195] Compiling C++ object libumbriel-core.a.p/src_view_registry.cpp.o
+[152/195] Compiling C++ object libumbriel-core.a.p/src_view_view.cpp.o
+[153/195] Compiling C++ object libumbriel-core.a.p/src_server_focus.cpp.o
+[154/195] Compiling C++ object libumbriel-core.a.p/src_xwayland_window.cpp.o
+[155/195] Compiling C++ object libumbriel-core.a.p/src_xwayland_xwayland.cpp.o
+[156/195] Compiling C++ object libumbriel-core.a.p/src_input_eis.cpp.o
+[157/195] Compiling C++ object libumbriel-core.a.p/src_xwayland_unmanaged.cpp.o
+[158/195] Compiling C++ object libumbriel-core.a.p/src_view_view_role.cpp.o
+[159/195] Compiling C++ object libumbriel-core.a.p/src_view_view_foreign.cpp.o
+[160/195] Compiling C++ object libumbriel-core.a.p/src_scene_border_rect.cpp.o
+[161/195] Compiling C++ object libumbriel-core.a.p/src_view_view_chrome.cpp.o
+[162/195] Compiling C++ object libumbriel-core.a.p/src_view_view_attachment.cpp.o
+[163/195] Compiling C++ object libumbriel-core.a.p/src_view_view_animation.cpp.o
+[164/195] Compiling C++ object libumbriel-core.a.p/src_view_view_snap.cpp.o
+[165/195] Compiling C++ object libumbriel-core.a.p/src_view_view_floating.cpp.o
+[166/195] Compiling C++ object libumbriel-core.a.p/src_scene_text_buffer.cpp.o
+[167/195] Compiling C++ object libumbriel-core.a.p/src_view_popup.cpp.o
+[168/195] Compiling C++ object libumbriel-core.a.p/src_scene_surface_blur.cpp.o
+[169/195] Compiling C++ object libumbriel-core.a.p/src_scene_hint_rect.cpp.o
+[170/195] Compiling C++ object libumbriel-core.a.p/src_view_view_state.cpp.o
+[171/195] Compiling C++ object libumbriel-core.a.p/src_view_view_lifecycle.cpp.o
+[172/195] Compiling C++ object libumbriel-core.a.p/src_layer_layer_surface.cpp.o
+[173/195] Compiling C++ object libumbriel-core.a.p/src_view_view_rules.cpp.o
+[174/195] Compiling C++ object libumbriel-core.a.p/src_scene_surface_shadow.cpp.o
+[175/195] Compiling C++ object libumbriel-core.a.p/src_scene_tab_label_cache.cpp.o
+[176/195] Compiling C++ object libumbriel-core.a.p/src_scene_tab_bar.cpp.o
+[177/195] Linking static target umbrielfx/libumbrielfx.a
+[178/195] Linking static target libumbriel-pure.a
+[179/195] Compiling C++ object libumbriel-core.a.p/src_scene_ssd_frame.cpp.o
+[180/195] Compiling C++ object umbriel.p/src_core_build_info.cpp.o
+[181/195] Compiling C++ object libumbriel-core.a.p/src_scene_quit_confirm.cpp.o
+[182/195] Compiling C++ object libumbriel-core.a.p/src_scene_tab_bar_style.cpp.o
+[183/195] Compiling C++ object libumbriel-core.a.p/src_scene_config_banner.cpp.o
+[184/195] Compiling C++ object libumbriel-core.a.p/src_scene_cheatsheet.cpp.o
+[185/195] Compiling C++ object libumbriel-core.a.p/src_lock_session_lock.cpp.o
+[186/195] Compiling C++ object libumbriel-core.a.p/src_workspace_tab_presenter.cpp.o
+[187/195] Compiling C++ object libumbriel-core.a.p/src_cli_ipc_client.cpp.o
+[188/195] Compiling C++ object libumbriel-core.a.p/src_workspace_scratchpad.cpp.o
+[189/195] Compiling C++ object libumbriel-core.a.p/src_workspace_workspace.cpp.o
+[190/195] Compiling C++ object libumbriel-core.a.p/src_overview_overview.cpp.o
+[191/195] Compiling C++ object umbriel.p/src_main.cpp.o
+[192/195] Compiling C++ object libumbriel-core.a.p/src_server_ipc.cpp.o
+[193/195] Compiling C++ object libumbriel-core.a.p/src_server_ipc_commands.cpp.o
+[194/195] Linking static target libumbriel-core.a
+[195/195] Linking target umbriel
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /usr/bin/ninja -C /build/umbriel-git/src/build

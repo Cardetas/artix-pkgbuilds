@@ -1,0 +1,71 @@
+pkgname=poweerrr
+pkgver=1.0
+pkgrel=1
+pkgdesc="Setuid C wrapper providing loginctl power actions for Noctalia v5 on Artix Dinit"
+arch=('x86_64')
+license=('MIT')
+depends=('dinit')
+conflicts=('elogind')
+
+build() {
+  cat << 'EOF' > poweerrr.c
+#include <fcntl.h>
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+
+int main(int argc, char *argv[]) {
+    if (setuid(0) != 0 || setgid(0) != 0) {
+        fprintf(stderr, "poweerrr: permission denied (must be in wheel group)\n");
+        return 1;
+    }
+
+    if (argc < 2) {
+        fprintf(stderr, "Usage: %s [suspend|reboot|poweroff]\n", argv[0]);
+        return 1;
+    }
+
+    const char *action = argv[1];
+
+    if (strcmp(action, "suspend") == 0) {
+        sync();
+        int fd = open("/sys/power/state", O_WRONLY);
+        if (fd < 0) {
+            perror("open /sys/power/state");
+            return 1;
+        }
+        if (write(fd, "mem", 3) != 3) {
+            perror("write /sys/power/state");
+            close(fd);
+            return 1;
+        }
+        close(fd);
+        return 0;
+    }
+
+    if (strcmp(action, "poweroff") == 0) {
+        execl("/usr/bin/shutdown", "poweroff", (char *)NULL);
+        perror("execl poweroff");
+        return 1;
+    }
+
+    if (strcmp(action, "reboot") == 0) {
+        execl("/usr/bin/shutdown", "reboot", (char *)NULL);
+        perror("execl reboot");
+        return 1;
+    }
+
+    fprintf(stderr, "poweerrr: unsupported action '%s'\n", action);
+    return 1;
+}
+EOF
+  cc -O2 poweerrr.c -o poweerrr
+}
+
+package() {
+  # Install setuid binary restricted to root and wheel group
+  install -Dm4750 -o root -g wheel poweerrr "$pkgdir/usr/bin/poweerrr"
+
+  # Symlink loginctl so Noctalia v5 auto-detects suspend, reboot, and poweroff
+  ln -s poweerrr "$pkgdir/usr/bin/loginctl"
+}

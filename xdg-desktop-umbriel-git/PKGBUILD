@@ -1,6 +1,6 @@
 # Maintainer: Custom Build for Artix Linux (dinit)
 pkgname=xdg-desktop-portal-umbriel-git
-pkgver=0.1.0.r0.g0000000
+pkgver=0.1.0.r64.ge69d6f7
 pkgrel=1
 pkgdesc="XDG Desktop Portal backend for the Umbriel Wayland compositor (git version)"
 arch=('x86_64' 'aarch64')

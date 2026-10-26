@@ -1,0 +1,174 @@
+noctalia-greeter has no wrap files
++ exec meson setup --prefix /usr --libexecdir lib --sbindir bin --buildtype plain --auto-features enabled --wrap-mode nodownload -D b_pie=true -D python.bytecompile=1 noctalia-greeter build-release -Db_ndebug=true
+The Meson build system
+Version: 1.12.1
+Source dir: /build/noctalia-greeter-git/src/noctalia-greeter
+Build dir: /build/noctalia-greeter-git/src/build-release
+Build type: native build
+Project name: noctalia-greeter
+Project version: 1.7.0
+C compiler for the host machine: cc (gcc 16.2.1 "cc (GCC) 16.2.1 20260810")
+C linker for the host machine: cc ld.bfd 2.47
+C++ compiler for the host machine: c++ (gcc 16.2.1 "c++ (GCC) 16.2.1 20260810")
+C++ linker for the host machine: c++ ld.bfd 2.47
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Found pkg-config: YES (/usr/bin/pkg-config) 3.0.10
+Run-time dependency wayland-client found: YES 1.26.0
+Run-time dependency wayland-protocols found: YES 1.49
+Run-time dependency xkbcommon found: YES 1.13.2
+Run-time dependency freetype2 found: YES 26.7.20
+Run-time dependency fontconfig found: YES 2.18.3
+Run-time dependency cairo found: YES 1.18.6
+Run-time dependency cairo-ft found: YES 1.18.6
+Run-time dependency pango found: YES 1.58.2
+Run-time dependency pangocairo found: YES 1.58.2
+Run-time dependency pangoft2 found: YES 1.58.2
+Run-time dependency librsvg-2.0 found: YES 2.63.4
+Run-time dependency libxml-2.0 found: YES 2.15.4
+Run-time dependency glib-2.0 found: YES 2.90.1
+Run-time dependency gobject-2.0 found: YES 2.90.1
+Run-time dependency gio-2.0 found: YES 2.90.1
+Run-time dependency wayland-server found: YES 1.26.0
+Run-time dependency tomlplusplus found: YES 3.4.0
+Run-time dependency nlohmann_json found: YES 3.12.0
+Run-time dependency wlroots-0.20 found: YES 0.20.2
+Run-time dependency libinput found: YES 1.32.0
+Run-time dependency egl found: YES 1.5
+Run-time dependency glesv2 found: YES 3.2
+Run-time dependency wayland-egl found: YES 18.1.0
+Has header "stb/stb_image_resize2.h" : YES 
+Run-time dependency libwebp found: YES 1.6.0
+Run-time dependency libjxl found: YES 0.12.0
+Run-time dependency libjxl_threads found: YES 0.12.0
+Program wayland-scanner found: YES (/usr/bin/wayland-scanner)
+Configuring org.noctalia.greeter.apply-appearance.policy using configuration
+Program sh found: YES (/usr/bin/sh)
+Program sh found: YES (/usr/bin/sh)
+Program true found: YES (/usr/bin/true)
+Program sh found: YES (/usr/bin/sh)
+Build targets in project: 23
+
+noctalia-greeter 1.7.0
+
+  User defined options
+    auto_features     : enabled
+    b_ndebug          : true
+    b_pie             : true
+    buildtype         : plain
+    libexecdir        : lib
+    prefix            : /usr
+    python.bytecompile: 1
+    sbindir           : bin
+    wrap_mode         : nodownload
+
+Found ninja-1.13.2 at /usr/bin/ninja
+Generating targets:   0%|          | 0/23 eta ?                                               Writing build.ninja:   0%|          | 0/176 eta ?                                                 ninja: Entering directory `/build/noctalia-greeter-git/src/build-release'
+[1/106] Generating fractional-scale-v1-client-header with a custom command
+[2/106] Generating cursor-shape-v1-client-header with a custom command
+[3/106] Generating viewporter-client-header with a custom command
+[4/106] Generating xdg-shell-client-header with a custom command
+[5/106] Generating fractional-scale-v1-client-source with a custom command
+[6/106] Generating viewporter-client-source with a custom command
+[7/106] Generating cursor-shape-v1-client-source with a custom command
+[8/106] Generating xdg-shell-client-source with a custom command
+[9/106] Compiling C++ object noctalia-greeter.p/src_core_ui_phase.cpp.o
+[10/106] Compiling C object noctalia-greeter.p/meson-generated_.._cursor-shape-v1-client-protocol.c.o
+[11/106] Compiling C object noctalia-greeter.p/meson-generated_.._fractional-scale-v1-client-protocol.c.o
+[12/106] Compiling C object noctalia-greeter.p/meson-generated_.._viewporter-client-protocol.c.o
+[13/106] Compiling C object noctalia-greeter.p/src_config_output_identity.c.o
+[14/106] Compiling C object noctalia-greeter.p/meson-generated_.._xdg-shell-client-protocol.c.o
+[15/106] Compiling C++ object noctalia-greeter.p/src_core_deferred_call.cpp.o
+[16/106] Compiling C++ object noctalia-greeter.p/src_render_core_color.cpp.o
+[17/106] Compiling C++ object noctalia-greeter.p/src_render_gl_shared_context.cpp.o
+[18/106] Compiling C++ object noctalia-greeter.p/src_render_backend_render_backend.cpp.o
+[19/106] Compiling C++ object noctalia-greeter.p/src_render_backend_gles_framebuffer.cpp.o
+[20/106] Compiling C++ object noctalia-greeter.p/src_render_core_async_texture_cache.cpp.o
+[21/106] Compiling C++ object noctalia-greeter.p/src_render_render_target.cpp.o
+[22/106] Compiling C++ object noctalia-greeter.p/src_render_core_blur_cache.cpp.o
+[23/106] Compiling C++ object noctalia-greeter.p/src_render_core_shared_texture_cache.cpp.o
+[24/106] Compiling C++ object noctalia-greeter.p/src_render_core_cached_layer.cpp.o
+[25/106] Compiling C++ object noctalia-greeter.p/src_render_core_shader_program.cpp.o
+[26/106] Compiling C++ object noctalia-greeter.p/src_render_backend_gles_texture_manager.cpp.o
+[27/106] Compiling C++ object noctalia-greeter.p/src_core_log.cpp.o
+[28/106] Compiling C++ object noctalia-greeter.p/src_core_resource_paths.cpp.o
+[29/106] Compiling C++ object noctalia-greeter.p/src_render_programs_glyph_program.cpp.o
+[30/106] Compiling C++ object noctalia-greeter.p/src_render_programs_linear_gradient_program.cpp.o
+[31/106] Compiling C++ object noctalia-greeter.p/src_render_programs_rect_program.cpp.o
+[32/106] Compiling C++ object noctalia-greeter.p/src_render_programs_image_program.cpp.o
+[33/106] Compiling C++ object noctalia-greeter.p/src_render_programs_blur_program.cpp.o
+[34/106] Compiling C++ object noctalia-greeter.p/src_render_backend_gles_render_backend.cpp.o
+[35/106] Compiling C++ object noctalia-greeter.p/src_wayland_wayland_seat.cpp.o
+[36/106] Compiling C++ object noctalia-greeter.p/src_render_programs_wallpaper_program.cpp.o
+[37/106] Compiling C++ object noctalia-greeter.p/src_render_programs_spinner_program.cpp.o
+[38/106] Compiling C++ object noctalia-greeter.p/src_render_programs_effect_program.cpp.o
+[39/106] Compiling C++ object noctalia-greeter.p/src_time_time_format.cpp.o
+[40/106] Compiling C++ object noctalia-greeter.p/src_render_programs_screen_corner_program.cpp.o
+[41/106] Compiling C++ object noctalia-greeter.p/src_render_programs_graph_program.cpp.o
+[42/106] Compiling C++ object noctalia-greeter.p/src_render_render_context.cpp.o
+[43/106] Compiling C++ object noctalia-greeter.p/src_render_animation_motion_service.cpp.o
+[44/106] Compiling C++ object noctalia-greeter.p/src_render_programs_audio_spectrum_program.cpp.o
+[45/106] Compiling C++ object noctalia-greeter.p/src_wayland_wayland_client.cpp.o
+[46/106] Compiling C++ object noctalia-greeter.p/src_render_scene_input_area.cpp.o
+[47/106] Compiling C++ object noctalia-greeter.p/src_render_animation_animation.cpp.o
+[48/106] Compiling C++ object noctalia-greeter.p/src_render_scene_node.cpp.o
+[49/106] Compiling C++ object noctalia-greeter.p/src_render_scene_input_dispatcher.cpp.o
+[50/106] Compiling C++ object noctalia-greeter.p/src_render_scene_graph_node.cpp.o
+[51/106] Compiling C++ object noctalia-greeter.p/src_render_animation_animation_manager.cpp.o
+[52/106] Compiling C++ object noctalia-greeter.p/src_ui_controls_box.cpp.o
+[53/106] Compiling C++ object noctalia-greeter.p/src_render_text_cairo_glyph_renderer.cpp.o
+[54/106] Compiling C++ object noctalia-greeter.p/src_ui_controls_image.cpp.o
+[55/106] Compiling C++ object noctalia-greeter.p/src_ui_controls_glyph.cpp.o
+[56/106] Compiling C++ object noctalia-greeter.p/src_ui_controls_button.cpp.o
+[57/106] Compiling C++ object noctalia-greeter.p/src_ui_controls_search_field.cpp.o
+[58/106] Compiling C++ object noctalia-greeter.p/src_ui_controls_label.cpp.o
+[59/106] Compiling C++ object noctalia-greeter.p/src_ui_controls_flex.cpp.o
+[60/106] Compiling C++ object noctalia-greeter.p/src_ui_controls_scroll_view.cpp.o
+[61/106] Compiling C++ object noctalia-greeter.p/src_ui_controls_input.cpp.o
+[62/106] Compiling C++ object noctalia-greeter.p/src_render_core_image_file_loader.cpp.o
+[63/106] Compiling C++ object noctalia-greeter.p/src_ui_style.cpp.o
+[64/106] Compiling C++ object noctalia-greeter.p/src_render_text_cairo_text_renderer.cpp.o
+[65/106] Compiling C++ object noctalia-greeter.p/src_ui_controls_spinner.cpp.o
+[66/106] Compiling C++ object noctalia-greeter.p/src_ui_controls_separator.cpp.o
+[67/106] Compiling C++ object noctalia-greeter.p/src_ui_controls_spacer.cpp.o
+[68/106] Compiling C++ object noctalia-greeter.p/src_ui_controls_scrollbar.cpp.o
+[69/106] Compiling C++ object noctalia-greeter.p/src_ui_palette.cpp.o
+[70/106] Compiling C++ object noctalia-greeter.p/src_theme_builtin_palettes.cpp.o
+[71/106] Compiling C++ object noctalia-greeter.p/src_accounts_accounts_icon.cpp.o
+[72/106] Compiling C++ object noctalia-greeter.p/src_greeter_privileged_state_paths.cpp.o
+[73/106] Compiling C++ object noctalia-greeter.p/src_greeter_session_config.cpp.o
+[74/106] Compiling C++ object noctalia-greeter.p/src_render_text_glyph_registry.cpp.o
+[75/106] Compiling C++ object noctalia-greeter.p/src_greeter_greetd_user.cpp.o
+[76/106] Compiling C++ object noctalia-greeter.p/src_greeter_appearance_config.cpp.o
+[77/106] Compiling C++ object noctalia-greeter.p/src_greeter_logind_resume.cpp.o
+[78/106] Compiling C++ object noctalia-greeter.p/src_greeter_greeter_sessions.cpp.o
+[79/106] Compiling C++ object noctalia-greeter.p/src_greeter_greeter_preferences.cpp.o
+[80/106] Compiling C++ object noctalia-greeter.p/src_tools_passwordless_sync_policy_xml.cpp.o
+[81/106] Compiling C++ object noctalia-greeter.p/src_greeter_power_actions.cpp.o
+[82/106] Compiling C++ object noctalia-greeter.p/src_greeter_greeter_window.cpp.o
+[83/106] Compiling C++ object noctalia-greeter-apply-appearance.p/src_greeter_privileged_state_paths.cpp.o
+[84/106] Compiling C++ object noctalia-greeter.p/src_greeter_greeter_config_io.cpp.o
+[85/106] Compiling C++ object noctalia-greeter-apply-appearance.p/src_core_log.cpp.o
+[86/106] Compiling C++ object noctalia-greeter.p/src_render_core_image_decoder.cpp.o
+[87/106] Compiling C++ object noctalia-greeter.p/src_greetd_greetd_client.cpp.o
+[88/106] Compiling C object noctalia-greeter-compositor.p/src_compositor_system_keyboard_config.c.o
+[89/106] Compiling C object noctalia-greeter-compositor.p/src_config_output_identity.c.o
+[90/106] Compiling C++ object noctalia-greeter.p/src_main.cpp.o
+[91/106] Compiling C++ object noctalia-greeter-apply-appearance.p/src_greeter_greetd_user.cpp.o
+[92/106] Compiling C++ object noctalia-greeter.p/src_greeter_greeter.cpp.o
+[93/106] Compiling C object noctalia-greeter-compositor.p/src_compositor_noctalia_compositor.c.o
+[94/106] Compiling C++ object noctalia-greeter.p/src_greeter_appearance_sync.cpp.o
+[95/106] Compiling C++ object noctalia-greeter-apply-appearance.p/src_greeter_greeter_preferences.cpp.o
+[96/106] Compiling C++ object noctalia-greeter-apply-appearance.p/src_tools_apply_appearance_main.cpp.o
+[97/106] Compiling C++ object noctalia-greeter-compositor.p/src_core_log.cpp.o
+[98/106] Compiling C++ object noctalia-greeter.p/src_greeter_greeter_surface.cpp.o
+[99/106] Compiling C++ object noctalia-greeter-apply-appearance.p/src_greeter_greeter_config_io.cpp.o
+[100/106] Compiling C++ object noctalia-greeter-apply-appearance.p/src_tools_secure_appearance_sync.cpp.o
+[101/106] Compiling C++ object noctalia-greeter.p/src_tools_passwordless_sync_policy.cpp.o
+[102/106] Compiling C++ object noctalia-greeter-compositor.p/src_greeter_greeter_config_io.cpp.o
+[103/106] Compiling C++ object noctalia-greeter-apply-appearance.p/src_greeter_appearance_sync.cpp.o
+[104/106] Linking target noctalia-greeter-compositor
+[105/106] Linking target noctalia-greeter-apply-appearance
+[106/106] Linking target noctalia-greeter
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /usr/bin/ninja -C /build/noctalia-greeter-git/src/build-release

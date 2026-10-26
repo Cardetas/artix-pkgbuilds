@@ -1,0 +1,88 @@
+The Meson build system
+Version: 1.12.1
+Source dir: /build/xdg-desktop-portal-umbriel-git/src/xdg-desktop-portal-umbriel
+Build dir: /build/xdg-desktop-portal-umbriel-git/src/build
+Build type: native build
+Project name: xdg-desktop-portal-umbriel
+Project version: 0.1.0
+C compiler for the host machine: cc (gcc 16.2.1 "cc (GCC) 16.2.1 20260810")
+C linker for the host machine: cc ld.bfd 2.47
+C++ compiler for the host machine: c++ (gcc 16.2.1 "c++ (GCC) 16.2.1 20260810")
+C++ linker for the host machine: c++ ld.bfd 2.47
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Found pkg-config: YES (/usr/bin/pkg-config) 3.0.10
+Run-time dependency sdbus-c++ found: YES 2.3.1
+Run-time dependency libpipewire-0.3 found: YES 1.6.9
+Run-time dependency wayland-client found: YES 1.26.0
+Run-time dependency wayland-protocols found: YES 1.49
+Run-time dependency libdrm found: YES 2.4.134
+Run-time dependency gbm found: YES 26.2.5-arch1.1
+Run-time dependency cairo found: YES 1.18.6
+Run-time dependency tomlplusplus found: YES 3.4.0
+Run-time dependency nlohmann_json found: YES 3.12.0
+Run-time dependency gtk4 found: YES 4.24.1
+Program wayland-scanner found: YES (/usr/bin/wayland-scanner)
+Configuring defaults.h using configuration
+Found pkg-config: YES (/usr/bin/pkg-config) 3.0.10
+Run-time dependency gio-2.0 found: YES 2.90.1
+Program /usr/bin/glib-compile-resources found: YES (/usr/bin/glib-compile-resources)
+Run-time dependency threads found: YES
+Configuring org.freedesktop.impl.portal.desktop.umbriel.service using configuration
+Configuring xdg-desktop-portal-umbriel.service using configuration
+Build targets in project: 15
+
+xdg-desktop-portal-umbriel 0.1.0
+
+  User defined options
+    buildtype : release
+    libexecdir: /usr/lib
+    prefix    : /usr
+    sysconfdir: /etc
+
+Found ninja-1.13.2 at /usr/bin/ninja
+Generating targets:   0%|          | 0/15 eta ?                                               Writing build.ninja:   0%|          | 0/68 eta ?                                                ninja: Entering directory `/build/xdg-desktop-portal-umbriel-git/src/build'
+[1/42] Generating ext-image-capture-source-v1-client-protocol.h with a custom command
+[2/42] Generating ext-foreign-toplevel-list-v1-protocol.c with a custom command
+[3/42] Generating linux-dmabuf-v1-protocol.c with a custom command
+[4/42] Generating ext-image-copy-capture-v1-client-protocol.h with a custom command
+[5/42] Generating linux-dmabuf-v1-client-protocol.h with a custom command
+[6/42] Generating ext-image-capture-source-v1-protocol.c with a custom command
+[7/42] Generating ext-foreign-toplevel-list-v1-client-protocol.h with a custom command
+[8/42] Generating ext-image-copy-capture-v1-protocol.c with a custom command
+[9/42] Generating xdg-output-unstable-v1-client-protocol.h with a custom command
+[10/42] Generating xdg-output-unstable-v1-protocol.c with a custom command
+[11/42] Generating picker-resources_c with a custom command
+[12/42] Generating picker-resources_h with a custom command
+[13/42] Compiling C object xdg-desktop-portal-umbriel.p/meson-generated_.._xdg-output-unstable-v1-protocol.c.o
+[14/42] Compiling C object xdg-desktop-portal-umbriel.p/meson-generated_.._linux-dmabuf-v1-protocol.c.o
+[15/42] Compiling C object xdg-desktop-portal-umbriel.p/meson-generated_.._ext-image-capture-source-v1-protocol.c.o
+[16/42] Compiling C object xdg-desktop-portal-umbriel.p/meson-generated_.._ext-foreign-toplevel-list-v1-protocol.c.o
+[17/42] Compiling C object xdg-desktop-portal-umbriel.p/meson-generated_.._ext-image-copy-capture-v1-protocol.c.o
+[18/42] Compiling C object umbriel-share-picker.p/meson-generated_.._ext-image-capture-source-v1-protocol.c.o
+[19/42] Compiling C object umbriel-share-picker.p/meson-generated_.._ext-image-copy-capture-v1-protocol.c.o
+[20/42] Compiling C object umbriel-share-picker.p/meson-generated_.._ext-foreign-toplevel-list-v1-protocol.c.o
+[21/42] Compiling C object umbriel-share-picker.p/meson-generated_.._linux-dmabuf-v1-protocol.c.o
+[22/42] Compiling C object umbriel-share-picker.p/meson-generated_.._xdg-output-unstable-v1-protocol.c.o
+[23/42] Compiling C object umbriel-share-picker.p/meson-generated_.._picker-resources.c.o
+[24/42] Compiling C++ object xdg-desktop-portal-umbriel.p/src_main.cpp.o
+[25/42] Compiling C++ object xdg-desktop-portal-umbriel.p/src_loop_loop.cpp.o
+[26/42] Compiling C++ object xdg-desktop-portal-umbriel.p/src_pipewire_pipewire.cpp.o
+[27/42] Compiling C++ object pipewire-buffer-params-test.p/tests_pipewire_buffer_params.cpp.o
+[28/42] Compiling C++ object umbriel-share-picker.p/src_loop_loop.cpp.o
+[29/42] Compiling C++ object xdg-desktop-portal-umbriel.p/src_config_config.cpp.o
+[30/42] Compiling C++ object xdg-desktop-portal-umbriel.p/src_dbus_dbus.cpp.o
+[31/42] Compiling C++ object umbriel-share-picker.p/src_picker_previews.cpp.o
+[32/42] Linking target pipewire-buffer-params-test
+[33/42] Compiling C++ object xdg-desktop-portal-umbriel.p/src_dbus_request.cpp.o
+[34/42] Compiling C++ object xdg-desktop-portal-umbriel.p/src_dbus_session.cpp.o
+[35/42] Compiling C++ object xdg-desktop-portal-umbriel.p/src_umbriel_ipc.cpp.o
+[36/42] Compiling C++ object xdg-desktop-portal-umbriel.p/src_wayland_wayland.cpp.o
+[37/42] Compiling C++ object umbriel-share-picker.p/src_wayland_wayland.cpp.o
+[38/42] Compiling C++ object umbriel-share-picker.p/src_picker_main.cpp.o
+[39/42] Compiling C++ object xdg-desktop-portal-umbriel.p/src_dbus_screenshot.cpp.o
+[40/42] Compiling C++ object xdg-desktop-portal-umbriel.p/src_dbus_screencast.cpp.o
+[41/42] Linking target umbriel-share-picker
+[42/42] Linking target xdg-desktop-portal-umbriel
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /usr/bin/ninja -C /build/xdg-desktop-portal-umbriel-git/src/build
